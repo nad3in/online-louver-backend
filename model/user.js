@@ -4,7 +4,6 @@ var currentUsers = {};
 module.exports.existingUser = async (userInfo) => {
     var users = await fs.readFile('model/usersData.json', 'utf8');
     currentUsers = JSON.parse(users);
-    console.log(userInfo)
     var currentUser = Object.keys(currentUsers).find(key => key == userInfo)
     return currentUser ? currentUsers[currentUser] : null
 }
