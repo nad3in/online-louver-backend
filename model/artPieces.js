@@ -29,3 +29,18 @@ module.exports.editArtPiece = async (artist, description, artName, pieceId) => {
     return artPieces[pieceId];
 
 }
+module.exports.deleteArtPiece = async (pieceId) => {
+    if (Object.keys(artPieces).length === 0) {
+        var pieces = await fs.readFile('model/artPiecesData.json', 'utf8');
+        artPieces = JSON.parse(pieces);
+    }
+    if (!artPieces[pieceId]) {
+        return;
+    }
+    delete artPieces[pieceId];
+    fs.writeFile('model/artPiecesData.json', JSON.stringify(artPieces), function (err) {
+        if (err) throw err;
+    })
+    return pieceId
+
+}
