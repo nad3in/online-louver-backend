@@ -17,6 +17,7 @@ const artRepo = require("./api-routes/POST/art");
 const genralArtRepo = require("./api-routes/GET/art");
 const editArtPieceRepo = require("./api-routes/PUT/art");
 const deleteArtPieceRepo = require("./api-routes/DELETE/art")
+const getUsersRepo = require("./api-routes/GET/user")
 app.post("/user", async (req, res) => {
     try {
         const user = await userRepo.AddUser(req, res)
@@ -64,6 +65,15 @@ app.put("/art", auth, async (req, res) => {
 app.delete("/art", auth, async (req, res) => {
     try {
         const result = await deleteArtPieceRepo.deleteArtPiece(req, res)
+        res.status(200).json(result);
+
+    } catch (err) {
+        console.log(err);
+    }
+});
+app.get("/user", auth, async (req, res) => {
+    try {
+        const result = await getUsersRepo.getUsers(req, res)
         res.status(200).json(result);
 
     } catch (err) {
