@@ -10,6 +10,5 @@ module.exports.editArtPiece = async (req, res) => {
         res.status(401).send("Unauthorized user");
     }
     var result = await artPieces.editArtPiece(artist, description, art_name, piece_id);
-    console.log("edit", result)
     return result;
 }
