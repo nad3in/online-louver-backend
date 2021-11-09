@@ -1,0 +1,23 @@
+{
+    "nadinee@test.com": {
+        "id": "9fde2412-85c9-42d4-854a-c6abe291cd6b",
+        "user_name": "nadinee@test.com",
+        "user_role": "ADMIN",
+        "password": "$2a$10$U.QyjPhfFYVzAU5TskinDuwjGCNFaso8EYSmz3IGHkMF7dzoEMLB.",
+        "user_phone_number": "01114027"
+    },
+    "nadineeg": {
+        "id": "acdb359f-750d-4681-8e32-164ffeaf8667",
+        "user_name": "nadineeg",
+        "user_role": "GUEST",
+        "password": "$2a$10$wiCeVCez5.TXTfVO0dGFaOtjc3k5NKAC9tbIO7ddPlloqc6ktmDzO",
+        "user_phone_number": "12211"
+    },
+    "nadin@test.com": {
+        "id": "b50741a4-332e-4c8f-a017-1c9c7e895350",
+        "user_name": "nadin@test.com",
+        "user_role": "GUEST",
+        "password": "$2a$10$r0kUFYKXl/JjRSXGZAZGEuP9Ft6eBdIIDCWwujRgs/aivgY/gS12.",
+        "user_phone_number": "01111111"
+    }
+}
